@@ -1,11 +1,10 @@
 package com.jfloresdev.constants;
 
-public class GlobalConstants {
+public interface GlobalConstants {
 
-    public static  final String USER = "postgres";
-    public static final String PASSWORD = "12345678";
-
-
-
+    String USER = "postgres";
+    String PASSWORD = "12345678";
 
 }
+
+
