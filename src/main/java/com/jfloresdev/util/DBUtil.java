@@ -1,6 +1,8 @@
 package com.jfloresdev.util;
 
 
+import com.jfloresdev.clases.User;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -23,9 +25,9 @@ public class DBUtil {
     }
 
 
-    public Connection conectar(String user, String password) throws SQLException {
-        this.user = user;
-        this.password=password;
+    public Connection conectar(User user, User password) throws SQLException {
+        this.user = user.getUser();
+        this.password= password.getPassword();
       /*
         try {
             this.user = user;

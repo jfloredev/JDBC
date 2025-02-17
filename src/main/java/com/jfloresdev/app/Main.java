@@ -1,7 +1,12 @@
 package com.jfloresdev.app;
 
 
+import com.jfloresdev.clases.User;
+import com.jfloresdev.constants.GlobalConstants;
 import com.jfloresdev.util.DBUtil;
+
+import static  com.jfloresdev.constants.GlobalConstants.USER;
+import static  com.jfloresdev.constants.GlobalConstants.PASSWORD;
 
 import java.sql.*;
 
@@ -10,7 +15,8 @@ public class Main /* extends MainBase*/{
         try{
 
             DBUtil db = new DBUtil();
-            Connection cn = db.conectar("postgres", "12345678");
+            User user = new User(USER,PASSWORD);
+            Connection cn = db.conectar(user,user);
             System.out.println("Connection OK");
 
             String sql = "SELECT * FROM libros";
