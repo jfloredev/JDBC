@@ -7,14 +7,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MainAdd extends MainBase{
+public class MainAdd {
 
 
     public static void main(String[] args) {
 
         try{
-
-            Connection cn = DBUtil.conectar();
+            DBUtil db = new DBUtil();
+            Connection cn = db.conectar();
             System.out.println("Connection OK");
 
             String sql = "INSERT INTO libros (uuid, title, resumen, paginas) VALUES (2,'Java', 'JFlores', 100)";

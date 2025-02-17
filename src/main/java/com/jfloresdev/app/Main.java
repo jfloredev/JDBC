@@ -8,7 +8,9 @@ import java.sql.*;
 public class Main /* extends MainBase*/{
     public static void main(String[] args) {
         try{
-            Connection cn = DBUtil.conectar();
+
+            DBUtil db = new DBUtil();
+            Connection cn = db.conectar("postgres", "12345678");
             System.out.println("Connection OK");
 
             String sql = "SELECT * FROM libros";
