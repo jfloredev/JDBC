@@ -1,12 +1,14 @@
 package com.jfloresdev.app;
 
 
+import com.jfloresdev.util.DBUtil;
+
 import java.sql.*;
 
-public class Main  extends MainBase{
+public class Main /* extends MainBase*/{
     public static void main(String[] args) {
         try{
-            Connection cn = Main.conectar();
+            Connection cn = DBUtil.conectar();
             System.out.println("Connection OK");
 
             String sql = "SELECT * FROM libros";

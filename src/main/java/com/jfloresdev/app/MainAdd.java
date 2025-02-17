@@ -1,5 +1,7 @@
 package com.jfloresdev.app;
 
+import com.jfloresdev.util.DBUtil;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +14,7 @@ public class MainAdd extends MainBase{
 
         try{
 
-            Connection cn = conectar();
+            Connection cn = DBUtil.conectar();
             System.out.println("Connection OK");
 
             String sql = "INSERT INTO libros (uuid, title, resumen, paginas) VALUES (2,'Java', 'JFlores', 100)";
